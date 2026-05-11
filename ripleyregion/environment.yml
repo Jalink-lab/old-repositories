@@ -1,0 +1,9 @@
+name: ripleyregion
+channels:
+  - conda-forge
+dependencies:
+  - conda-forge::python=3.10
+  - conda-forge::matplotlib
+  - conda-forge::numpy
+  - conda-forge::shapely
+  - conda-forge::tqdm
