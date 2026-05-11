@@ -1,0 +1,33 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun May 10 19:58:40 2020
+
+@author: l.nahidiazar
+"""
+
+"""
+Shows how to make a 2D histogram from distance data
+"""
+import matplotlib.pyplot as plt
+import numpy as np
+from roifile import ImagejRoi  # pip install roifile
+from jalinksinglemolecule import ThunderStormFile
+
+rootFolder='c://dataff//'
+# load csvs and roi
+histones = ThunderStormFile(rootFolder+'07-190906+HT1080WT+H3K9Me3A647.csv')
+lads = ThunderStormFile(rootFolder+'07-190906+HT1080WT+LADsA488_chromcorr.csv')
+lamin = ImagejRoi.fromfile(rootFolder+'07-190906+HT1080WT+LaminaA532_chromcorr.roi')
+
+nn_lad_to_histone = lads.get_nearest_neighbors(histones)  # will be on y
+nn_lad_to_histone = nn_lad_to_histone[0]  # only need the distances, not the indices
+nn_lad_to_lamin = lads.get_nearest_neighbors(lamin)  # will be on x
+
+xedges = np.linspace(0, 1000,11)  # from 0nm to 1000nm with 32 pixels (33 edges = 32 pixels)
+yedges = np.linspace(0, 40, 65) # from 0nm to 40nm with with 32 pixels
+
+# following is a copy from line 69 in jalinksinglemolecule.py
+h, xedges, yedges, im = plt.hist2d(nn_lad_to_lamin, nn_lad_to_histone, bins=[xedges, yedges])
+plt.colorbar()
+plt.show()

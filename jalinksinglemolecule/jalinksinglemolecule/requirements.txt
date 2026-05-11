@@ -1,0 +1,7 @@
+matplotlib>=3.1.1
+numpy~=1.18.1
+roifile~=2020.5.1
+scipy~=1.4.1
+roifile
+pandas~=1.0.3
+scikit-learn~=0.23.1
