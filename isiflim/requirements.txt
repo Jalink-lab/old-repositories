@@ -1,0 +1,4 @@
+flifile~=1.2.0
+fdflim~=0.5.1
+numpy~=1.19.0
+matplotlib~=3.2.2

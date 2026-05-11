@@ -1,0 +1,18 @@
+# conda env create -f environment.yml
+# conda activate isiflim
+# (if it goes wrong) conda remove --name isiflim --all
+name: isiflim
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - matplotlib
+  - notebook
+  - scipy
+  - watermark
+  - pip
+  - pip:
+    - flifile
+    - fdflim
