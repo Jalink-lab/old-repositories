@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/connect.png</file>
+        <file>images/disconnect.png</file>
+        <file>images/application-exit.png</file>
+        <file>images/settings.png</file>
+        <file>images/clear.png</file>
+        <file>images/console.png</file>
+        <file>images/settings_inj.png</file>
+        <file>images/injector_empty.png</file>
+        <file>images/injector_full.png</file>
+    </qresource>
+</RCC>

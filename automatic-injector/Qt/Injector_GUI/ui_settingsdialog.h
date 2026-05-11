@@ -1,0 +1,251 @@
+/********************************************************************************
+** Form generated from reading UI file 'settingsdialog.ui'
+**
+** Created by: Qt User Interface Compiler version 5.12.5
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_SETTINGSDIALOG_H
+#define UI_SETTINGSDIALOG_H
+
+#include <QtCore/QVariant>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QVBoxLayout>
+
+QT_BEGIN_NAMESPACE
+
+class Ui_SettingsDialog
+{
+public:
+    QGridLayout *gridLayout_3;
+    QGroupBox *selectBox;
+    QGridLayout *gridLayout;
+    QComboBox *serialPortInfoListBox;
+    QLabel *descriptionLabel;
+    QLabel *manufacturerLabel;
+    QLabel *serialNumberLabel;
+    QLabel *locationLabel;
+    QLabel *vidLabel;
+    QLabel *pidLabel;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *applyButton;
+    QGroupBox *parametersBox;
+    QGridLayout *gridLayout_2;
+    QLabel *baudRateLabel;
+    QComboBox *baudRateBox;
+    QLabel *dataBitsLabel;
+    QComboBox *dataBitsBox;
+    QLabel *parityLabel;
+    QComboBox *parityBox;
+    QLabel *stopBitsLabel;
+    QComboBox *stopBitsBox;
+    QLabel *flowControlLabel;
+    QComboBox *flowControlBox;
+    QGroupBox *additionalOptionsGroupBox;
+    QVBoxLayout *verticalLayout;
+    QCheckBox *localEchoCheckBox;
+    QGroupBox *groupBox;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *PIDlabel;
+    QLabel *pidFoundLabel;
+
+    void setupUi(QDialog *SettingsDialog)
+    {
+        if (SettingsDialog->objectName().isEmpty())
+            SettingsDialog->setObjectName(QString::fromUtf8("SettingsDialog"));
+        SettingsDialog->resize(281, 272);
+        gridLayout_3 = new QGridLayout(SettingsDialog);
+        gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
+        selectBox = new QGroupBox(SettingsDialog);
+        selectBox->setObjectName(QString::fromUtf8("selectBox"));
+        gridLayout = new QGridLayout(selectBox);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        serialPortInfoListBox = new QComboBox(selectBox);
+        serialPortInfoListBox->setObjectName(QString::fromUtf8("serialPortInfoListBox"));
+
+        gridLayout->addWidget(serialPortInfoListBox, 0, 0, 1, 1);
+
+        descriptionLabel = new QLabel(selectBox);
+        descriptionLabel->setObjectName(QString::fromUtf8("descriptionLabel"));
+
+        gridLayout->addWidget(descriptionLabel, 1, 0, 1, 1);
+
+        manufacturerLabel = new QLabel(selectBox);
+        manufacturerLabel->setObjectName(QString::fromUtf8("manufacturerLabel"));
+
+        gridLayout->addWidget(manufacturerLabel, 2, 0, 1, 1);
+
+        serialNumberLabel = new QLabel(selectBox);
+        serialNumberLabel->setObjectName(QString::fromUtf8("serialNumberLabel"));
+
+        gridLayout->addWidget(serialNumberLabel, 3, 0, 1, 1);
+
+        locationLabel = new QLabel(selectBox);
+        locationLabel->setObjectName(QString::fromUtf8("locationLabel"));
+
+        gridLayout->addWidget(locationLabel, 4, 0, 1, 1);
+
+        vidLabel = new QLabel(selectBox);
+        vidLabel->setObjectName(QString::fromUtf8("vidLabel"));
+
+        gridLayout->addWidget(vidLabel, 5, 0, 1, 1);
+
+        pidLabel = new QLabel(selectBox);
+        pidLabel->setObjectName(QString::fromUtf8("pidLabel"));
+
+        gridLayout->addWidget(pidLabel, 6, 0, 1, 1);
+
+
+        gridLayout_3->addWidget(selectBox, 0, 0, 1, 1);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalSpacer = new QSpacerItem(96, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        applyButton = new QPushButton(SettingsDialog);
+        applyButton->setObjectName(QString::fromUtf8("applyButton"));
+
+        horizontalLayout->addWidget(applyButton);
+
+
+        gridLayout_3->addLayout(horizontalLayout, 3, 0, 1, 2);
+
+        parametersBox = new QGroupBox(SettingsDialog);
+        parametersBox->setObjectName(QString::fromUtf8("parametersBox"));
+        gridLayout_2 = new QGridLayout(parametersBox);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        baudRateLabel = new QLabel(parametersBox);
+        baudRateLabel->setObjectName(QString::fromUtf8("baudRateLabel"));
+
+        gridLayout_2->addWidget(baudRateLabel, 0, 0, 1, 1);
+
+        baudRateBox = new QComboBox(parametersBox);
+        baudRateBox->setObjectName(QString::fromUtf8("baudRateBox"));
+
+        gridLayout_2->addWidget(baudRateBox, 0, 1, 1, 1);
+
+        dataBitsLabel = new QLabel(parametersBox);
+        dataBitsLabel->setObjectName(QString::fromUtf8("dataBitsLabel"));
+
+        gridLayout_2->addWidget(dataBitsLabel, 1, 0, 1, 1);
+
+        dataBitsBox = new QComboBox(parametersBox);
+        dataBitsBox->setObjectName(QString::fromUtf8("dataBitsBox"));
+
+        gridLayout_2->addWidget(dataBitsBox, 1, 1, 1, 1);
+
+        parityLabel = new QLabel(parametersBox);
+        parityLabel->setObjectName(QString::fromUtf8("parityLabel"));
+
+        gridLayout_2->addWidget(parityLabel, 2, 0, 1, 1);
+
+        parityBox = new QComboBox(parametersBox);
+        parityBox->setObjectName(QString::fromUtf8("parityBox"));
+
+        gridLayout_2->addWidget(parityBox, 2, 1, 1, 1);
+
+        stopBitsLabel = new QLabel(parametersBox);
+        stopBitsLabel->setObjectName(QString::fromUtf8("stopBitsLabel"));
+
+        gridLayout_2->addWidget(stopBitsLabel, 3, 0, 1, 1);
+
+        stopBitsBox = new QComboBox(parametersBox);
+        stopBitsBox->setObjectName(QString::fromUtf8("stopBitsBox"));
+
+        gridLayout_2->addWidget(stopBitsBox, 3, 1, 1, 1);
+
+        flowControlLabel = new QLabel(parametersBox);
+        flowControlLabel->setObjectName(QString::fromUtf8("flowControlLabel"));
+
+        gridLayout_2->addWidget(flowControlLabel, 4, 0, 1, 1);
+
+        flowControlBox = new QComboBox(parametersBox);
+        flowControlBox->setObjectName(QString::fromUtf8("flowControlBox"));
+
+        gridLayout_2->addWidget(flowControlBox, 4, 1, 1, 1);
+
+
+        gridLayout_3->addWidget(parametersBox, 0, 1, 1, 1);
+
+        additionalOptionsGroupBox = new QGroupBox(SettingsDialog);
+        additionalOptionsGroupBox->setObjectName(QString::fromUtf8("additionalOptionsGroupBox"));
+        verticalLayout = new QVBoxLayout(additionalOptionsGroupBox);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        localEchoCheckBox = new QCheckBox(additionalOptionsGroupBox);
+        localEchoCheckBox->setObjectName(QString::fromUtf8("localEchoCheckBox"));
+        localEchoCheckBox->setChecked(true);
+
+        verticalLayout->addWidget(localEchoCheckBox);
+
+
+        gridLayout_3->addWidget(additionalOptionsGroupBox, 1, 0, 1, 1);
+
+        groupBox = new QGroupBox(SettingsDialog);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        horizontalLayout_2 = new QHBoxLayout(groupBox);
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
+        PIDlabel = new QLabel(groupBox);
+        PIDlabel->setObjectName(QString::fromUtf8("PIDlabel"));
+
+        horizontalLayout_2->addWidget(PIDlabel, 0, Qt::AlignRight);
+
+        pidFoundLabel = new QLabel(groupBox);
+        pidFoundLabel->setObjectName(QString::fromUtf8("pidFoundLabel"));
+
+        horizontalLayout_2->addWidget(pidFoundLabel);
+
+
+        gridLayout_3->addWidget(groupBox, 1, 1, 1, 1);
+
+
+        retranslateUi(SettingsDialog);
+
+        QMetaObject::connectSlotsByName(SettingsDialog);
+    } // setupUi
+
+    void retranslateUi(QDialog *SettingsDialog)
+    {
+        SettingsDialog->setWindowTitle(QApplication::translate("SettingsDialog", "Settings", nullptr));
+        selectBox->setTitle(QApplication::translate("SettingsDialog", "Select Serial Port", nullptr));
+        descriptionLabel->setText(QApplication::translate("SettingsDialog", "Description:", nullptr));
+        manufacturerLabel->setText(QApplication::translate("SettingsDialog", "Manufacturer:", nullptr));
+        serialNumberLabel->setText(QApplication::translate("SettingsDialog", "Serial number:", nullptr));
+        locationLabel->setText(QApplication::translate("SettingsDialog", "Location:", nullptr));
+        vidLabel->setText(QApplication::translate("SettingsDialog", "Vendor ID:", nullptr));
+        pidLabel->setText(QApplication::translate("SettingsDialog", "Product ID:", nullptr));
+        applyButton->setText(QApplication::translate("SettingsDialog", "Apply", nullptr));
+        parametersBox->setTitle(QApplication::translate("SettingsDialog", "Select Parameters", nullptr));
+        baudRateLabel->setText(QApplication::translate("SettingsDialog", "BaudRate:", nullptr));
+        dataBitsLabel->setText(QApplication::translate("SettingsDialog", "Data bits:", nullptr));
+        parityLabel->setText(QApplication::translate("SettingsDialog", "Parity:", nullptr));
+        stopBitsLabel->setText(QApplication::translate("SettingsDialog", "Stop bits:", nullptr));
+        flowControlLabel->setText(QApplication::translate("SettingsDialog", "Flow control:", nullptr));
+        additionalOptionsGroupBox->setTitle(QApplication::translate("SettingsDialog", "Additional Options", nullptr));
+        localEchoCheckBox->setText(QApplication::translate("SettingsDialog", "Local echo", nullptr));
+        groupBox->setTitle(QApplication::translate("SettingsDialog", "Auto Connect", nullptr));
+        PIDlabel->setText(QApplication::translate("SettingsDialog", "PID:", nullptr));
+        pidFoundLabel->setText(QApplication::translate("SettingsDialog", "-", nullptr));
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class SettingsDialog: public Ui_SettingsDialog {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_SETTINGSDIALOG_H

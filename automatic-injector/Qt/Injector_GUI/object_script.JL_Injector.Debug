@@ -1,0 +1,10 @@
+debug/main.o
+debug/mainwindow.o
+debug/settingsdialog.o
+debug/console.o
+debug/settingsinjectordialog.o
+debug/qrc_injector.o
+debug/moc_mainwindow.o
+debug/moc_settingsdialog.o
+debug/moc_console.o
+debug/moc_settingsinjectordialog.o

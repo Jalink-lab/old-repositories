@@ -1,0 +1,10 @@
+release/main.o
+release/mainwindow.o
+release/settingsdialog.o
+release/console.o
+release/settingsinjectordialog.o
+release/qrc_injector.o
+release/moc_mainwindow.o
+release/moc_settingsdialog.o
+release/moc_console.o
+release/moc_settingsinjectordialog.o
