@@ -1,9 +1,0 @@
-name: flimsim
-channels:
-  - conda-forge
-dependencies:
-  - conda-forge::python=3.9
-  - conda-forge::matplotlib
-  - conda-forge::watermark
-  - conda-forge::numpy
-  - conda-forge::notebook
