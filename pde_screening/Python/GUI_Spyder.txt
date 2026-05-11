@@ -1,0 +1,1 @@
+tools->prefs->run->execute in an external system terminal

@@ -1,0 +1,58 @@
+how to set up the python environment so the global_analysis.py file works with no hickups. kj, RH, BB 8-2020. But mostly KJ :)
+
+This files contains a set of tips on how to get Python analysis of PDE screening working, along with the Jyputer Notebooks to do the after-analysis and plotting.
+
+I assume the following:
+
+1) the environments in anaconda are at "c:\users\YourName\anaconda3\env" (no string quotes)
+2) the environment to be added is "pde_screening". Make sure it does not already exist; if it does, delete it completely after exiting anaconda
+3) the 7Zip file to extract this new environment from is on the surfdrive, in "shared\screening_data_immutable\pde)screening.7z"
+4) the analysis routine to run is on surfdrive in a folder "pde_screening\Python", named "total_analysis.py" or "total_analysis KeesTest.py" if you first want to run it on a small subset of data.
+5) the data are on surfdrive in a folder, and arranges as layed out in the script "total_analysis.py"
+
+
+<<<<<GETTING TOTAL_ANALYSIS TO RUN IN PYTHON>>>>>>>
+STEPS:
+
+(A) unzip de file "pde_screening.7z" with 7zip or similar app to create a new folder in the anaconda env folder, creating "C:\Users\k.jalink\Anaconda3\envs" (substitute your name for k.jalink)
+
+(B) only now start up anaconda navigator. Make sure it sees the new environment and switch to that in anaconda.The environment should have spyder (I use 4.1.4) and Qt Console (4.7.6) installed, and its a good idea to also install the Cmd.exe Prompt (0.1.1).
+
+(C) startup spider from the Launch button. If it complains about not having Qt Console, uninstall spyder and then reinstall it (I had to do this on both PCs)
+
+(D)In Spyder, set the current working directory: Tools>Preferences>Current working directory to point to whereever your analysis scripts are, see 4) above. Mine is at: "H:/LocalSurfDrive/GITclones/pde_screening/Python".
+
+(E)Its a good idea to start with the dataset "screening_data_immutable_small" which is at "H:\LocalSurfDrive\Shared\Screening_Data_Immutable_small" on my pc. change that to wherever your own LocalSurfDrive is. To do that, use "total_analysis_KeesTest.py" (or create your own) and make sure the base_path (line 19) points to wherever your data are. For me, ('H:\\',LocalSurfDrive', 'Shared'). The inpaths variable should point to the small data subset, for me: inpaths = [Path(base_path, 'Screening_Data_Immutable_small')] (line20). The outpath should be pointed accordingly to: outpaths = [Path(base_path, 'Screening_Data_Mutable_small')], which does not need to exist at the start of the analysis.
+
+(F)For the first runs, make sure the output directory is empty. It allows you to see the results being placed in that folder as the analysis goes on.
+
+(G) run the script "total_analysis KeesTest.py" with the green run-button, or piece by piece by highlighting a section of script, and pressing the 'run selection or current line' button.  
+
+(H) observe folders being created in Screening_Data_Mutable_Small: "intensity data" which will show first the intensity pics, and then the segmentation pics, and: "results" which will show all_results.csv plus csv files called fit and tau for each well. IF so, you are all set and can continue analysing these results with the Jupyter Notebooks.Should be done in a few minutes.
+
+(I) now, clear the console ("clear" in the console and press enter) and run the analysis "total_analysis.py" which includes all data from several days of experiments. Again make sure the base_path and inpath and outpath are as needed for the data in your PC.
+(Takes about 2-3 hours if you do not clean the segmentation folders)
+
+
+<<<<<<<<GETTING JN POSTANALYSIS SCRIPTS TO WORK>>>>>>>
+
+Opening up ipynb analysis files: One of two ways.
+
+[1] First way
+is to temporarily copy them to the C drive, e.g. to C:\temp. If you open up an empty jupyter notebook you can File>Open things from the C drive, but not (??) from other drives. Nota Bene! Dependencies must also be on C and therefore easiest is to copy the entire Python folder to C:\temp. Even then, be prepared for serious twaeking before they run.
+
+You have to pip install watermark. 
+
+Also, make sure the path is set to your local copy of surfdrive, and NOT to your windows shortcut in explorer. Somehow, direct linking of the scripts to surfdrive does not work.
+
+Note that the analysis may take several minutes without progress indicator, so don't press Run too often.
+
+Of course, when you do like this, for the committing of updated notebooks to github, because the notebook was ran from a local copy, make sure you first copy the new notebook to whatever folder GiAhead or GITextensions is looking in. 
+
+[2] Another way
+is to change the default prompt in JN to wherever your notebooks are. Example, I have my local copies of all github files in H:\LocalSurfDrive\GITclones\pde_screening\Python, and the dependencies are in subfolder AutomatedCellAnalysis. 
+(A) open anaconda prompt from the windows menu: Start>all programs>anaconda>anaconda prompt(pde_screening).
+(B) at the prompt change to drive you need: after it answers '<pde_screening> C:\Users\k.jalink' just type H: and enter
+(C) then start JN by typing jupyter notebook at that same command window (NOT from within anaconda).
+
+To me, this works like a charm. BUT you need to keep open the prompt window or JN will crash. The Python files should still run normally
